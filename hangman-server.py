@@ -3,7 +3,9 @@ import threading
 import getpass
 import time
 
-HOST = "127.0.0.1"
+# Use '0.0.0.0' to allow connections from other computers on the network.
+# Use '127.0.0.1' for local testing only.
+HOST = "0.0.0.0"
 PORT = 65432
 MAX_WRONG_GUESSES = 6
 
@@ -164,6 +166,7 @@ def main():
     global secret_word, game_over, client_threads
 
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    # This allows the server to reuse the same address, avoiding "Address already in use" errors
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_socket.bind((HOST, PORT))
     server_socket.listen()
