@@ -3,7 +3,10 @@ import threading
 import os
 import sys
 
-HOST = "127.0.0.1"  # The server's hostname or IP address
+# The IP address of the server.
+# - Use "127.0.0.1" if the client and server are on the same machine.
+# - Replace with the server's local network IP if they are on different machines.
+HOST = "127.0.0.1"
 PORT = 65432        # The port used by the server
 
 def receive_messages(sock):
