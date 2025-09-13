@@ -33,20 +33,39 @@ The system consists of two scripts: `hangman-server.py` and `hangman-client.py`.
 First, start the server in a terminal.
 
 ```bash
-python /home/almeida/SIN352_AulaPratica_02/hangman-server.py
+python hangman-server.py
 ```
 
-The server will prompt you to **enter the secret word** for the match. The word will not be displayed on the screen for security. After entering it, the server will be ready to accept player connections.
+The server will prompt you to **enter the secret word** for the match. The word will not be displayed on the screen. After entering it, the server will be ready to accept player connections.
 
 ### 2. Start the Client(s)
 
 For each player, open a **new terminal** and run the following command:
 
 ```bash
-python /home/almeida/SIN352_AulaPratica_02/hangman-client.py
+python hangman-client.py
 ```
 
 The client will automatically connect to the server.
+
+### 3. Configuring the Connection
+
+By default, the client (`hangman-client.py`) is configured to connect to a server running on the same machine (`HOST = "127.0.0.1"`).
+
+If the server is running on a different machine on the same local network, you need to:
+
+1.  **Find the local IP address** of the machine where the server is running.
+2.  **Open the `hangman-client.py` file** and change the `HOST` variable to the server's IP address.
+
+For example:
+
+```python
+# Before
+HOST = "127.0.0.1"
+
+# After (if the server's IP is 192.168.1.10)
+HOST = "192.168.1.10"
+```
 
 ## How to Play
 
