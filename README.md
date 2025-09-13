@@ -1,5 +1,9 @@
 # Multiplayer Hangman Game (TCP)
 
+![Python 3.x](https://img.shields.io/badge/Python-3.x-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Status](https://img.shields.io/badge/status-finished-green)
+
 This project is a multiplayer version of the classic Hangman game, using TCP sockets for communication between a server and multiple clients.
 
 ## Project Objective
@@ -74,3 +78,7 @@ HOST = "192.168.1.10"
 3.  The game state will be updated for all connected players.
 4.  The game ends when a player guesses the word or when the maximum number of errors (6) is reached.
 5.  At the end of the match, the server operator will be asked if a new match should be started.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
